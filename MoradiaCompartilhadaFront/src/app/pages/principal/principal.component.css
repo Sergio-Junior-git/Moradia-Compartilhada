@@ -1,0 +1,60 @@
+.container {
+  padding: 20px;
+}
+
+.filter-card {
+  margin-bottom: 25px;
+  background: #e8f1ff;
+  border-left: 5px solid #1e62ff;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.full {
+  grid-column: span 2;
+}
+
+.price-row {
+  grid-column: span 2;
+  display: flex;
+  gap: 15px;
+}
+
+.half {
+  width: 100%;
+}
+
+.btn {
+  grid-column: span 2;
+  height: 50px;
+  background: #1e62ff;
+  color: white;
+  font-weight: bold;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.moradia-card {
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 12px;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.18);
+  }
+}
+
+.preco {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1e62ff;
+}

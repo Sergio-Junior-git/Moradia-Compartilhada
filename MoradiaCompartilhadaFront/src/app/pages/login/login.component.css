@@ -1,0 +1,14 @@
+.login-page {
+  display:flex;
+  height:100vh;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg, #f5f7fa, #e9eef7);
+}
+.login-card {
+  width: 360px;
+  padding: 16px;
+}
+.full { width: 100%; }
+
+.error { color: #b00020; margin: 8px 0; }

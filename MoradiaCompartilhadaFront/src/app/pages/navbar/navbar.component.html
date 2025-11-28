@@ -1,0 +1,26 @@
+<mat-toolbar color="primary" class="navbar">
+  <button mat-button routerLink="/home" class="logo">UniLar</button>
+
+  <span class="spacer"></span>
+
+  <nav class="nav-links">
+    <button mat-button routerLink="/principal">Principal</button>
+    <button mat-button routerLink="/sobre">Sobre Nós</button>
+    <button mat-button routerLink="/contato">Fale Conosco</button>
+    <button mat-button routerLink="/anuncios">Quero Anunciar</button>
+  </nav>
+
+  <button *ngIf="!isLogged" mat-raised-button color="accent" routerLink="/login">
+    Entrar
+  </button>
+
+  <button *ngIf="isLogged" mat-button [matMenuTriggerFor]="menu">
+    <img [src]="foto" class="avatar" />
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/perfil">Meu Perfil</button>
+    <button mat-menu-item routerLink="/anuncios">Meus Anuncios</button>
+    <button mat-menu-item (click)="logout()">Sair</button>
+  </mat-menu>
+</mat-toolbar>

@@ -1,0 +1,65 @@
+<div class="container">
+
+  <!-- FILTROS -->
+  <mat-card class="filter-card">
+    <div class="filters">
+
+      <!-- Texto -->
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Buscar por região, título ou descrição</mat-label>
+        <input matInput [(ngModel)]="filtros.texto">
+      </mat-form-field>
+
+      <!-- Preço -->
+      <div class="price-row">
+        <mat-form-field appearance="outline" class="half">
+          <mat-label>Preço mínimo</mat-label>
+          <input type="number" matInput [(ngModel)]="filtros.minPreco">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="half">
+          <mat-label>Preço máximo</mat-label>
+          <input type="number" matInput [(ngModel)]="filtros.maxPreco">
+        </mat-form-field>
+      </div>
+
+      <!-- Quartos -->
+      <mat-form-field appearance="outline" class="half">
+        <mat-label>Quartos</mat-label>
+        <mat-select [(ngModel)]="filtros.quartos">
+          <mat-option [value]="null">Qualquer</mat-option>
+          <mat-option *ngFor="let q of quartosOptions" [value]="q">{{ q }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Tipo -->
+      <mat-form-field appearance="outline" class="half">
+        <mat-label>Tipo</mat-label>
+        <mat-select [(ngModel)]="filtros.tipo">
+          <mat-option [value]="null">Todos</mat-option>
+          <mat-option *ngFor="let t of tipos" [value]="t">{{ t }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="btn" (click)="buscar()">
+        Buscar
+      </button>
+
+    </div>
+  </mat-card>
+
+  <!-- LISTA DE CARDS -->
+  <div class="cards">
+    <mat-card class="moradia-card" *ngFor="let m of moradias" (click)="openDetails(m.id)">
+      <img mat-card-image [src]="m.fotoUrl" alt="Foto da moradia">
+
+      <mat-card-content>
+        <h2>{{ m.titulo }}</h2>
+        <p class="preco">R$ {{ m.preco | number }}</p>
+        <p>{{ m.endereco }}</p>
+        <p>{{ m.quartos }} quartos</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>

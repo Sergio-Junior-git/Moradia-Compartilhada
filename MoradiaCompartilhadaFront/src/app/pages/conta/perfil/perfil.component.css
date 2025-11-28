@@ -1,0 +1,21 @@
+.perfil-card,
+.senha-card {
+  max-width: 600px;
+  margin: 25px auto;
+  padding: 20px;
+}
+
+.linha {
+  display: flex;
+  gap: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}

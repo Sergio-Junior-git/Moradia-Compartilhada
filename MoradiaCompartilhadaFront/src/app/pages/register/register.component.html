@@ -1,0 +1,41 @@
+<div class="container">
+
+  <mat-card class="card">
+    <h2>Criar conta</h2>
+
+    <form [formGroup]="form">
+
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="nome">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Telefone</mat-label>
+        <input matInput formControlName="telefone">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input matInput type="password" formControlName="senha">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="registrar()" [disabled]="loading">
+        Criar conta
+      </button>
+
+      <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+      <div class="login-link">
+        Já tem uma conta?
+        <a routerLink="/login">Entrar</a>
+      </div>
+
+    </form>
+  </mat-card>
+</div>

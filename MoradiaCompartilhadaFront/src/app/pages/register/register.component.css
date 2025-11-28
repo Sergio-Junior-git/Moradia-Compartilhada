@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.card {
+  width: 380px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.login-link {
+  margin-top: 15px;
+  text-align: center;
+}

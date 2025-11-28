@@ -1,0 +1,55 @@
+<div class="container">
+
+  <h2>Criar Novo Anúncio</h2>
+
+  <form [formGroup]="form" (ngSubmit)="enviar()">
+
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>Título</mat-label>
+      <input matInput formControlName="titulo">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput rows="5" formControlName="descricao"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>Endereço</mat-label>
+      <input matInput formControlName="endereco">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="half">
+      <mat-label>Preço (R$)</mat-label>
+      <input matInput type="number" formControlName="preco">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="half">
+      <mat-label>Quartos</mat-label>
+      <input matInput type="number" formControlName="quartos">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>Tipo de Moradia</mat-label>
+      <mat-select formControlName="tipo">
+        <mat-option *ngFor="let t of tiposMoradia" [value]="t.value">
+          {{ t.label }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-checkbox formControlName="disponivelImediatamente">
+      Disponível imediatamente
+    </mat-checkbox>
+
+    <mat-checkbox formControlName="contasInclusas">
+      Contas incluídas
+    </mat-checkbox>
+
+    <button mat-raised-button color="primary" class="btn" type="submit">
+      Criar anúncio
+    </button>
+
+  </form>
+
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+
+  <div class="header">
+    <h1>Meus Anúncios</h1>
+    <button mat-raised-button color="primary" (click)="criarNovo()">
+      Criar novo anúncio
+    </button>
+  </div>
+
+  <div class="lista">
+    <mat-card *ngFor="let m of anuncios" class="item">
+      <img
+        class="foto"
+        [src]="m.fotos?.length 
+            ? ('http://localhost:8080/api/fotos/' + m.fotos?.[0]?.fileName)
+            : 'assets/sem-foto.png'"
+      />
+      <div class="info">
+        <h2>{{ m.titulo }}</h2>
+        <p>{{ m.endereco }}</p>
+        <p class="preco">R$ {{ m.preco }}</p>
+
+        <button mat-button color="primary" [routerLink]="['/moradia', m.id]">
+          Ver detalhes
+        </button>
+      </div>
+    </mat-card>
+  </div>
+
+</div>

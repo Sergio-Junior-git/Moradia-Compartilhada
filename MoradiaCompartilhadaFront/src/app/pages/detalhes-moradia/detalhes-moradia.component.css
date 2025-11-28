@@ -1,0 +1,76 @@
+.detalhes-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.foto-wrapper {
+  width: 100%;
+  height: 380px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+.foto-principal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-info {
+  margin-bottom: 20px;
+}
+
+.titulo {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.tags {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  background: #eeeeee;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.descricao h2,
+.anunciante h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.descricao p {
+  font-size: 16px;
+}
+
+.anunciante-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  max-width: 350px;
+}
+
+.user-icon {
+  font-size: 42px;
+  color: #555;
+}
+
+.nome {
+  font-size: 18px;
+}

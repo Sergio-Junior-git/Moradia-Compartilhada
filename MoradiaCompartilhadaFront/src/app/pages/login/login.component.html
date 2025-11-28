@@ -1,0 +1,30 @@
+<div class="login-page">
+  <mat-card class="login-card">
+    <mat-card-title>Entrar</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <mat-form-field appearance="fill" class="full">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" type="email" />
+          <mat-error *ngIf="form.get('email')?.invalid">Email inválido</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full">
+          <mat-label>Senha</mat-label>
+          <input matInput formControlName="senha" type="password" />
+          <mat-error *ngIf="form.get('senha')?.invalid">Senha inválida</mat-error>
+        </mat-form-field>
+
+        <div *ngIf="error" class="error">{{ error }}</div>
+
+        <button mat-raised-button color="primary" class="full" type="submit" [disabled]="loading">
+          {{ loading ? 'Entrando...' : 'Entrar' }}
+        </button>
+      </form>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <a routerLink="/register">Criar conta</a>
+    </mat-card-actions>
+  </mat-card>
+</div>

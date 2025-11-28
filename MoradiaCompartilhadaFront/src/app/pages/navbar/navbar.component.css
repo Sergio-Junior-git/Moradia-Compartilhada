@@ -1,0 +1,25 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4495c6;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.menu-button {
+  display: none;
+}

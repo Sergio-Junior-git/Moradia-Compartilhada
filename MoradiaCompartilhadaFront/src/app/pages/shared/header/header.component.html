@@ -1,0 +1,33 @@
+<mat-toolbar color="primary" class="toolbar">
+
+  <span class="logo">Moraia Compartilhada</span>
+
+  <span class="spacer"></span>
+
+  <!-- Se não estiver logado -->
+  <button *ngIf="!isLogged" mat-raised-button color="accent" routerLink="/login">
+    Entrar
+  </button>
+
+  <!-- Se estiver logado -->
+  <div *ngIf="isLogged" class="user-area">
+    <button mat-button [matMenuTriggerFor]="menu">
+      <img class="user-avatar" [src]="userFoto" alt="Foto" />
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/perfil">
+        Perfil
+      </button>
+
+      <button mat-menu-item routerLink="/anuncios">
+        MeusAnuncios
+      </button>
+
+      <button mat-menu-item (click)="logout()">
+        Sair
+      </button>
+    </mat-menu>
+  </div>
+
+</mat-toolbar>

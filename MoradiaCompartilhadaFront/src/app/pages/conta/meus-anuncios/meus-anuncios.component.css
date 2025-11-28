@@ -1,0 +1,35 @@
+.container {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+}
+
+.item img {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.preco {
+  font-weight: bold;
+  margin-top: 5px;
+}

@@ -1,0 +1,19 @@
+.home-container {
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  color: #333;
+}
+
+.logo-img {
+  margin-top: 20px;
+  width: 180px;
+}
+
+.slogan {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-top: 20px;
+  color: #004aad;
+}

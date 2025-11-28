@@ -1,0 +1,63 @@
+<mat-card class="perfil-card">
+  <h2>Meu Perfil</h2>
+
+  <form [formGroup]="form" (ngSubmit)="salvar()">
+
+    <div class="linha">
+      <mat-form-field appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="nome">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Sobrenome</mat-label>
+        <input matInput formControlName="sobrenome">
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Gênero</mat-label>
+      <mat-select formControlName="genero">
+        <mat-option value="Masculino">Masculino</mat-option>
+        <mat-option value="Feminino">Feminino</mat-option>
+        <mat-option value="Outro">Outro</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Data de Nascimento</mat-label>
+      <input matInput type="date" formControlName="dataNascimento">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Telefone</mat-label>
+      <input matInput formControlName="telefone">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Salvar Alterações</button>
+  </form>
+</mat-card>
+
+<!-- troca de senha -->
+<mat-card class="senha-card">
+  <h2>Alterar Senha</h2>
+
+  <form [formGroup]="formSenha" (ngSubmit)="alterarSenha()">
+    <mat-form-field appearance="fill">
+      <mat-label>Senha atual</mat-label>
+      <input matInput type="password" formControlName="senhaAtual">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nova senha</mat-label>
+      <input matInput type="password" formControlName="novaSenha">
+    </mat-form-field>
+
+    <button mat-raised-button color="accent">Atualizar Senha</button>
+  </form>
+</mat-card>

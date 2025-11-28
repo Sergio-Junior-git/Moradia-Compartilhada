@@ -1,0 +1,58 @@
+.contato-container {
+  width: 80%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px 10%;
+  gap: 40px;
+}
+
+/* Conteúdo principal */
+.info-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contato-img {
+  width: 380px;
+  height: auto;
+  border-radius: 14px;
+}
+
+.info-card {
+  background: #e4f2ff;
+  padding: 24px;
+  border-radius: 16px;
+  width: 380px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.info-card h2 {
+  color: #004785;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.social-section {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 20px;
+}
+
+.social-section mat-icon {
+  width: 45px;
+  height: 45px;
+  font-size: 45px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-section mat-icon:hover {
+  transform: scale(1.15);
+}

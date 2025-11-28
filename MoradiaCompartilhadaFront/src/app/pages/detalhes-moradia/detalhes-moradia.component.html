@@ -1,0 +1,68 @@
+<div class="detalhes-container">
+
+  <!-- FOTO PRINCIPAL -->
+  <div class="foto-wrapper" *ngIf="moradia?.fotos?.length">
+    <img 
+      class="foto-principal"
+      [src]="moradia.fotos[0]" 
+      alt="Foto da moradia" 
+    />
+  </div>
+
+  <!-- TITULO + TAGS -->
+  <div class="header-info">
+    <h1 class="titulo">{{ moradia?.titulo }}</h1>
+
+    <div class="tags">
+      <span class="tag">
+        <mat-icon>home</mat-icon>
+        {{ moradia?.tipo }}
+      </span>
+
+      <span class="tag">
+        <mat-icon>meeting_room</mat-icon>
+        {{ moradia?.quartos }} quartos
+      </span>
+
+      <span class="tag">
+        <mat-icon>place</mat-icon>
+        {{ moradia?.endereco }}
+      </span>
+
+      <span class="tag">
+        <mat-icon>schedule</mat-icon>
+        {{ moradia?.disponivelImediatamente ? 'Disponível imediatamente' : 'Disponibilidade não imediata' }}
+      </span>
+
+      <span class="tag">
+        <mat-icon>receipt_long</mat-icon>
+        {{ moradia?.contasInclusas ? 'Contas inclusas' : 'Contas não inclusas' }}
+      </span>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <!-- DESCRIÇÃO -->
+  <div class="descricao">
+    <h2>Descrição</h2>
+    <p>{{ moradia?.descricao }}</p>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <!-- ANUNCIANTE -->
+  <div class="anunciante">
+    <h2>Anunciante</h2>
+
+    <div class="anunciante-card">
+      <mat-icon class="user-icon">person</mat-icon>
+
+      <div class="info">
+        <p class="nome"><strong>{{ moradia?.owner?.nome }}</strong></p>
+        <p>Telefone: {{ moradia?.owner?.telefone }}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
